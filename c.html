@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+<meta charset="UTF-8">
+
+
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+  
+      <link rel="stylesheet" href="css/style.css">
+
+
+<title>task1</title>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https:////cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+ <style type="text/css">
+.WebContainer{
+    width: 100%;
+    height: auto;
+}
+.articles{
+    width:90%; /*Takes 90% width from WebContainer*/
+    height: auto;
+    margin: auto;
+} 
+
+
+
+.multi-item-carousel{
+.carousel-indicators.middle {
+    left: 0;
+    right: 0;
+    top: auto;
+    bottom: 15px;
+    text-align: center;
+}
+    .carousel-indicators.middle li {
+        float: none;
+        display: inline-block;
+    }
+  .carousel-inner{
+    > .item{
+      transition: 500ms ease-in-out left;
+    }
+    .active{
+      &.left{
+        left:-33%;
+      }
+      &.right{
+        left:33%;
+      }
+    }
+    .next{
+      left: 33%;
+    }
+    .prev{
+      left: -33%;
+    }
+    @media all and (transform-3d), (-webkit-transform-3d) {
+      > .item{
+        // use your favourite prefixer here
+        transition: 500ms ease-in-out left;
+        transition: 500ms ease-in-out all;
+        backface-visibility: visible;
+        transform: none!important;
+      }
+    }
+  }
+  .carouse-control{
+    &.left, &.right{
+      background-image: none;
+    }
+  }
+}
+h1{
+  color: white;
+  font-size: 2.25em;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  text-shadow: 0px 2px 0px rgba(0, 0, 0, 1);
+}
+
+
+
+
+
+ body {
+ 
+ background-image: url("file:///C:/Users/sweb1/Desktop/images/1.jpg");
+height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+ th, td {
+ text-align: left;
+ background-color: #e0e9f0;
+ border-top: 1px solid #f1f8fe;
+ border-bottom: 1px solid #cbd2d8;
+ border-right: 1px solid #cbd2d8;
+}
+
+ fieldset {
+ width: 300px;
+ border: 1px solid #d6d6d6;
+ background-color: yellow;
+ line-height: 1.6em;}
+ legend {
+ font-style:italic;
+ color:#666666;}
+ input[type="text"] {
+ width: 120px;
+ border: 1px solid #d6d6d6;
+ padding: 2px;
+ outline: none;}
+ input[type="text"]:focus,
+ input[type="text"]:hover {
+ background-color: #d0e2f0;
+ border: 1px solid #999;}
+ input[type="submit"] {
+ border: 1px solid #006633;
+ background-color: #009966;
+ color: #FFFFFF;
+ border-radius: 5px;
+ padding: 5px;
+ }
+ input[type="submit"]:hover {
+ border: 1px solid #006633;
+background-color: #00CC33;
+ color: #FFFFFF;
+ cursor: pointer;}
+ .title {
+ float: left;
+ width: 160px;
+ clear: left;}
+ .submit {
+ width: 310px;
+ text-align: right;}
+ </style>
+</head>
+<body>
+
+<form name="frm" method="post" onsubmit="return validateform()" style="margin-top:35px; margin-left:700px;">
+ <fieldset>
+ <a href="file:///C:/git/Sushant/c.html">Register</a><a href="file:///C:/git/Sushant/d.html">Login</a>
+ <p><label class="title" for="name" >Your name:</label>
+ <input type="text" name="name" id="name" required><br />
+ <label class="title" for="email">Your email:</label>
+ <input type="text" name="email" id="email" required></br>
+ <label class="title" for="phone">Phone:</label>
+ <input type="Text" name="phone" id="phone required"></br>
+ </fieldset>
+ <div class="submit"><input type="submit" value="Register" /></div>
+ </form>
+<script>
+function validateform(){
+var name=document.frm.name.value;
+var phone=document.frm.phone.value;
+if (isNaN(phon)){  
+  document.getElementById("numloc").innerHTML="Enter Numeric value only";  
+  return false;  
+}else{  
+  return true;  
+  }  
+</script>
+
+
+
+
+<div class="bg"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="carousel slide multi-item-carousel" id="theCarousel">
+        <div class="carousel-inner">
+          <div class="item active">
+            <div class="col-xs-4"><a href="#1"><img src="file:///C:/Users/sweb1/Desktop/images/devil.png" class="img-responsive"></a></div>
+          </div>
+          <div class="item">
+            <div class="col-xs-4"><a href="#1"><img src="file:///C:/Users/sweb1/Desktop/images/download.png" class="img-responsive"></a></div>
+          </div>
+          <div class="item">
+            <div class="col-xs-4"><a href="#1"><img src="file:///C:/Users/sweb1/Desktop/images/images.png" class="img-responsive"></a></div>
+          </div>
+          <div class="item">
+            <div class="col-xs-4"><a href="#1"><img src="file:///C:/Users/sweb1/Desktop/images/twitter.png" class="img-responsive"></a></div>
+          </div>
+          <div class="item">
+            <div class="col-xs-4"><a href="#1"><img src="file:///C:/Users/sweb1/Desktop/images/devil.png" class="img-responsive"></a></div>
+          </div>
+          <div class="item">
+            <div class="col-xs-4"><a href="#1"><img src="file:///C:/Users/sweb1/Desktop/images/devil.png" class="img-responsive"></a></div>
+          </div>
+          <!-- add  more items here -->
+          <!-- Example item start:  -->
+          
+          <div class="item">
+            <div class="col-xs-4"><a href="#1"><img src="file:///C:/Users/sweb1/Desktop/images/devil.png" class="img-responsive"></a></div>
+          </div>
+          
+          <!--  Example item end -->
+        </div>
+        <a class="left carousel-control" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+        <a class="right carousel-control" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+// Instantiate the Bootstrap carousel
+$('.multi-item-carousel').carousel({
+  interval: false
+});
+
+// for every slide in carousel, copy the next slide's item in the slide.
+// Do the same for the next, next item.
+$('.multi-item-carousel .item').each(function(){
+  var next = $(this).next();
+  if (!next.length) {
+    next = $(this).siblings(':first');
+  }
+  next.children(':first-child').clone().appendTo($(this));
+  
+  if (next.next().length>0) {
+    next.next().children(':first-child').clone().appendTo($(this));
+  } else {
+  	$(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+  }
+});
+</script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+
+    <script src="js/index.js">
+</script>
+
+
+
+
+
+
+ 
+
+
+</body>
+</html>
