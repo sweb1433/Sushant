@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+
+   <div class="container">
+   <div class="row" style="background-color: skyblue" style="margin-top: 100px">First
+      <div class="col-md-6 col-xs-6">
+        <img src="http://themes.kadencethemes.com/virtue-bold/wp-content/uploads/2013/06/hoodie_1_front-400x400.jpg"/>
+      </div>
+      <div class="col-md-6 col-xs-6">
+      <div class="panel panel-default">
+      <div class="panel panel-body">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Timer-Like <p id="demo"></p></h2>
+          </div>
+          <div class="col-md-12">
+            <h2>Product Quantity: <a id="clicks">10</a></p></h2>
+          </div>
+          <div class="col-md-12" style="padding: 5px">
+            <input type="submit" value="Buy" class="btn" style="width: 100px"  onClick="onClick();lockoutSubmit(this);"/ >
+                  
+          </div>
+        </div>
+      </div>
+
+      </div>
+
+
+    
+   </div>
+  
+    
+
+   </div>
+   <script>
+document.getElementById("demo").innerHTML = Date();
+var clicks = 10;
+    function onClick() {
+      if (clicks>0) {
+        clicks -= 1;
+     document.getElementById("clicks").innerHTML = clicks;
+ }
+ else{
+document.getElementById("clicks").innerHTML="Product Out Of Stock";
+}
+    };
+
+    function lockoutSubmit(button) {
+    var oldValue = button.value;
+
+    button.setAttribute('disabled', true);
+    button.value = '...processing...';
+
+    setTimeout(function(){
+        button.value = oldValue;
+        button.removeAttribute('disabled');
+    }, 3000)
+}
+
+</script>
+
+</body>
+</html>
