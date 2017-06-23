@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>React Filter</title>
+    <script src="C:\Users\sweb1\Downloads\React-Boilerplate-master\React-Boilerplate-master\src\js\react.min.js"></script>
+    <script src="C:\Users\sweb1\Downloads\React-Boilerplate-master\React-Boilerplate-master\src\js\react-dom.min.js"></script>
+    <script src="C:\Users\sweb1\Downloads\React-Boilerplate-master\React-Boilerplate-master\src\js\browser.min.js"></script>
+    <style type="text/css">
+      * {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a.header {
+  background-color: #e2e2e2;
+  cursor: default;
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+    </style>
+</head>
+<body style="background-color: black">
+<h2>Twitter Type Filter</h2>
+
+    <div id="container"></div>
+
+    <script type="text/babel">
+       
+       var Comment = React.createClass({
+
+       myFun: function(){
+       var val=this.refs.newText.value;
+       console.log('typed' +val);
+       this.setState({editing: false});
+       },
+
+
+        render: function () {
+        return(
+        <div className="commentContainer">
+        <div className="commentText">
+        <textarea  id="myInput" placeholder="Search for Names..." title="Type in a name." onkeyup="myFun()"></textarea>
+        
+
+          <ul id="myUL">
+            <li><a href="#">Amit</a></li>
+  <li><a href="#">Ajit</a></li>
+  <li><a href="#">Amisha</a></li>
+  <li><a href="#">Andrew</a></li>
+  <li><a href="#">Abraham</a></li>
+
+    <li><a href="#">Bhuwan</a></li>
+  <li><a href="#">Bhawesh</a></li>
+  <li><a href="#">Bhawna</a></li>
+  <li><a href="#">Bol Radha bol</a></li>
+
+    <li><a href="#">Cat</a></li>
+  <li><a href="#">Canadian</a></li>
+  <li><a href="#">Carl Marks</a></li>
+  <li><a href="#">Carlos</a></li>
+            </ul>
+        </div>
+        
+        </div>
+        );
+        }
+
+        
+    
+       });
+       ReactDOM.render(
+       <Comment />
+       ,document.getElementById('container')
+       );
+    </script>
+
+</body>
+</html>
+

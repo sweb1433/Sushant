@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#inputtxt {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#list li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#list li a.header {
+  background-color: #e2e2e2;
+  cursor: default;
+}
+
+#list li a:hover:not(.header) {
+  background-color: #eee;
+}
+</style>
+</head>
+<body style="background-color: grey">
+
+<div class="container">
+<div class="row" style="background-color: grey" style="margin-top: 100px">
+<div class="col-md-6 col-xs-12">
+<h2 style="text-decoration-color: white">Twitter Type Filter</h2>
+
+<input type="text" id="inputtxt" onkeyup="funfltr()" placeholder="Search for names.." title="Type in a name">
+
+<ul id="list" >
+  <li><a href="#" style="background-color: red">Amit</a></li>
+  <li><a href="#" style="background-color: red">Ajit</a></li>
+  <li><a href="#" style="background-color: red">Amisha</a></li>
+  <li><a href="#" style="background-color: red">Andrew</a></li>
+  <li><a href="#" style="background-color: red">Abraham</a></li>
+
+  <li><a href="#" style="background-color: green">Bhuwan</a></li>
+  <li><a href="#" style="background-color: green">Bhawesh</a></li>
+  <li><a href="#" style="background-color: green">Bhawna</a></li>
+  <li><a href="#" style="background-color: green">Bol Radha bol</a></li>
+
+  <li><a href="#" style="background-color: darkgrey">Cat</a></li>
+  <li><a href="#" style="background-color: darkgrey">Canadian</a></li>
+  <li><a href="#" style="background-color: darkgrey">Carl Marks</a></li>
+  <li><a href="#" style="background-color: darkgrey">Carlos</a></li>
+  <p id="none"></p>
+</ul>
+</div>
+</div>
+</div>
+
+<script>
+function funfltr() {
+    var input, fltr, ul, li, a, i;
+    input = document.getElementById("inputtxt");
+    fltr = input.value.toUpperCase();
+    ul = document.getElementById("list");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(fltr) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+
+        }
+    }
+}
+</script>
+
+</body>
+</html>
